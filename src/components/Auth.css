@@ -6,13 +6,19 @@
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: rebeccapurple;
+  background-color: rgb(142, 205, 221);
   align-items: center;
   margin-top: 10%;
+  border-radius: 8px;
+  font-family: 'Oswald', sans-serif;
+  background-image: url("https://assets-global.website-files.com/5db99670374d1d829291af4f/62daea0efbb22203a371a92b_hero-glow-2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left -50px top -120px;
 }
 h1 {
   padding: 30px;
-  color: white;
+  color: rgb(255, 250, 221);
   font-size: 50px;
 }
 label {
@@ -29,11 +35,16 @@ input {
   margin: 10px;
   padding: 10px;
   font-size: 20px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
 }
 .login-btn {
   border: none;
   width: 80%;
   padding: 10px;
+  border-radius: 3px;
+  background-color: rgb(34, 102, 141);
 }
 .login-btn:hover {
   color: white;

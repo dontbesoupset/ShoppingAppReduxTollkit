@@ -4,6 +4,8 @@
   flex: 1;
 }
 .total-price {
+  font-family: Arial, serif;
+  color: #22668D;
   text-align: right;
   margin-right: 50px;
   margin-bottom: 20px;

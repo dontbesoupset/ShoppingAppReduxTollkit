@@ -8,7 +8,7 @@
   flex-wrap: wrap;
 }
 button {
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: auto;
   padding: 10px;
   color: white;
@@ -17,6 +17,7 @@ button {
   background-color: rgba(21, 26, 42, 0.787);
 }
 .card {
+  font-family: Oswald, Arial;
   width: 250px;
   height: 250px;
   display: flex;
@@ -25,6 +26,7 @@ button {
   align-items: center;
   justify-content: center;
   box-shadow: 5px 5px 10px #ccc;
+  border-radius: 5px;
 }
 .card img {
   width: 90%;
@@ -40,10 +42,11 @@ button {
 
 .orderBtn {
   width: 200px;
-  background: orangered;
+  background: #FFCC70;
   border: none;
   cursor: pointer;
+  border-radius: 3px;
 }
 .orderBtn:hover {
-  background: rgb(89, 0, 190);
+  background: #22668D;
 }

@@ -5,13 +5,15 @@ li {
   padding: 10px;
 }
 .cartIcon h3 {
-  border: 1px solid #ccc;
-  border-radius: 20px;
+  border: 1px solid #8ECDDD;
+  border-radius: 4px;
   padding: 10px;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .cart-container {
-  border: 1px solid black;
+  font-family: Arial, sans-serif;
+  border: 1px solid #8ECDDD;
   border-radius: 10px;
   margin: 20px;
   height: 400px;
@@ -23,18 +25,19 @@ li {
 .cartItem {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  align-items: center;
+  border: none;
   border-radius: 10px;
   padding: 20px;
   font-size: 20px;
   font-weight: bold;
-  background: #2f3c7e;
-  color: #fbeaeb;
+  background: #22668D;
+  color: #FFFADD;
 }
 .cart-actions {
-  color: white;
+  color: #FFFADD;
   font-size: 20px;
   width: 50px;
   border: none;
-  background: rgb(10, 7, 24);
+  background: #8ECDDD;
 }

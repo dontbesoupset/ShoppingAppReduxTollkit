@@ -1,3 +1,4 @@
+
 .header-nav {
   position: sticky;
   box-shadow: 0px 10px 20px #ccc;
@@ -11,4 +12,14 @@
 .header-h2 {
   font-family: monospace;
   font-size: 30px;
+}
+
+.logout-btn {
+  padding: 10px;
+  background-color: #FFCC70;
+  border-radius: 3px;
+}
+
+.logout-btn:hover {
+  background-color: #8ECDDD;
 }
