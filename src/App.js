@@ -5,6 +5,7 @@ import Layout from "./components/Layout";
 import { useDispatch, useSelector } from 'react-redux'
 import Notification from "./components/Notification";
 import { uiActions } from "./store/ui-slice";
+import { sendDataAction } from "./store/cart-slice";
 
 let isFirstRender = true;
 
@@ -20,32 +21,8 @@ function App() {
       return
     }
 
-    const sendRequest = async () => {
-      dispatch(uiActions.showNotification({
-        open: true,
-        message: "Sending request",
-        type: 'warning'
-      }))
-      const res = await fetch('https://shoppingcartreduxhttp-default-rtdb.firebaseio.com/cartItems.json', {
-        method: "PUT",
-        body: JSON.stringify(cart)
-      })
-      const data = await res.json();
+    dispatch(sendDataAction(cart))
 
-       dispatch(uiActions.showNotification({
-        open: true,
-        message: "Sent Requet To Database Successfully",
-        type: 'success'
-      }))
-
-    }
-    sendRequest().catch(err => {
-      dispatch(uiActions.showNotification({
-        open: true,
-        message: "Sending Request Failed",
-        type: 'error'
-      }))
-    });
   }, [cart])
 
   return (
