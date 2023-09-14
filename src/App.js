@@ -5,7 +5,7 @@ import Layout from "./components/Layout";
 import { useDispatch, useSelector } from 'react-redux'
 import Notification from "./components/Notification";
 import { uiActions } from "./store/ui-slice";
-import { sendDataAction } from "./store/cart-slice";
+import { fetchData, sendDataAction } from "./store/cart-actions"
 
 let isFirstRender = true;
 
@@ -15,15 +15,21 @@ function App() {
   const cart = useSelector(state => state.cart);
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
+  // useEffect(() => {
+  //   dispatch(fetchData())
+  // }, [dispatch])
+
   useEffect(() => {
     if (isFirstRender) {
       isFirstRender = false;
       return
     }
 
-    dispatch(sendDataAction(cart))
+    if(cart.changed) {
+      dispatch(sendDataAction(cart))
+    }
 
-  }, [cart])
+  }, [cart, dispatch])
 
   return (
     <div className="App">
