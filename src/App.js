@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import Notification from "./components/Notification";
 import { uiActions } from "./store/ui-slice";
 
+let isFirstRender = true;
+
 function App() {
   const dispatch = useDispatch();
   const notification = useSelector(state => state.ui.notification)
@@ -13,6 +15,10 @@ function App() {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
   useEffect(() => {
+    if (isFirstRender) {
+      isFirstRender = false;
+      return
+    }
 
     const sendRequest = async () => {
       dispatch(uiActions.showNotification({
@@ -44,7 +50,7 @@ function App() {
 
   return (
     <div className="App">
-      <Notification type={notification.type} message={notification.message} />
+      {notification && <Notification type={notification.type} message={notification.message} />}
       {isLoggedIn ? 
         <Layout /> 
         : 
